@@ -23,7 +23,7 @@ public class EmployeeMgmtService implements IEmployeeService
 	@Override
 	public String registerEmployee(Employee emp) {
 		int idval= empRepo.save(emp).getEid();
-		return idval+"employee register";
+		return idval+"employee register sucessfully";
 	}
 
 }

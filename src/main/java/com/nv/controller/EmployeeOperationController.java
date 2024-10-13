@@ -1,5 +1,6 @@
 package com.nv.controller;
 
+import java.lang.ProcessBuilder.Redirect;
 import java.util.List;
 import java.util.Map;
 
@@ -8,6 +9,7 @@ import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 
 import com.nv.model.Employee;
 import com.nv.service.IEmployeeService;
@@ -43,11 +45,11 @@ public class EmployeeOperationController
 		return "emp_register";
 		
 	}
-	@PostMapping("/register")
-	public String registerEmployee(@ModelAttribute("emp") Employee emp,Map<String,Object> map) 
+	@PostMapping("/register")//PRG->solve double posting problem+ flash attribute
+	public String registerEmployee(@ModelAttribute("emp") Employee emp,RedirectAttributes atts) 
 	{
 		String msg= empService.registerEmployee(emp);
-		map.put("resultMsg", msg);
+		atts.addFlashAttribute("resultMsg",msg);
 		
 		return "redirect:report";
 		
