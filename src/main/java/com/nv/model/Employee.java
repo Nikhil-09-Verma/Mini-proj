@@ -19,7 +19,7 @@ public class Employee implements Serializable
 	@SequenceGenerator(name="gen1",sequenceName = "emp_id_seq",initialValue = 100, allocationSize = 1)
 	@GeneratedValue(generator = "gen1",strategy = GenerationType.SEQUENCE)
 	private Integer eid;
-	private String eName;
+	private String ename;
 	private String job;
 	private Double sal;
 }

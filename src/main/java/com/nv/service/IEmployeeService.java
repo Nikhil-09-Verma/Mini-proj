@@ -7,5 +7,6 @@ import com.nv.model.Employee;
 public interface IEmployeeService 
 {
 	List<Employee> showAllEmp();
+	String registerEmployee(Employee emp);
 
 }
