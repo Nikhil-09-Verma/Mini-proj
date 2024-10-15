@@ -7,6 +7,7 @@
 <title>Home</title>
 </head>
 <body>
-<h1 style="text-align: center;"><a href="report"><img alt="" src="images/report.jpg"></a></h1>
+<h1 style="text-align: center; color="red";> Employee Reports</h1>
+<h2 style="text-align: center;"><a href="report"><img alt="" src="images/report.jpg"></a></h2>
 </body>
 </html>
