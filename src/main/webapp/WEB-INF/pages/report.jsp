@@ -29,7 +29,7 @@
 						<td>${emp.sal}</td>
 						<td>
 						<a href="edit?no=${emp.eid }">Edit</a>
-						<a href="delete?no=${emp.eid }">delete</a>
+						<a href="delete?no=${emp.eid }" onclick="return confirm('are you sure to delete')">delete</a>
 						</td>
 					</tr>
 
